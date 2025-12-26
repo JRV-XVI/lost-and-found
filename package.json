@@ -1,0 +1,23 @@
+{
+  "name": "iot-lost-and-found",
+  "version": "1.0.0",
+  "description": "1. Clonar el repositorio del proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clay2605293/IoT-Lost-and-Found.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clay2605293/IoT-Lost-and-Found/issues"
+  },
+  "homepage": "https://github.com/Clay2605293/IoT-Lost-and-Found#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

@@ -1,0 +1,458 @@
+/* Ajustes globales */
+body {
+    background: #FAF3EC;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #FAF3EC;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Estilo del contenedor de usuario */
+  .user-info {
+    width: 100%;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #748194;
+    font-size: 32px;
+  }
+  
+  /* Contenedor para las tarjetas de productos */
+  .product-cards-container {
+    display: flex;
+    justify-content: space-evenly; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en varias filas si es necesario */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-top: 20px;
+  }
+  
+  .product-card {
+    background-color: white;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 0 15px grey;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #748194;
+  }
+  
+  .product-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #5A3E79;
+  }
+  
+  .product-subtitle {
+    font-size: 16px;
+    color: #BF93B6;
+  }
+  
+  .product-status {
+    font-size: 14px;
+    color: #748194;
+    margin: 10px 0;
+  }
+  
+  button {
+    background-color: #5A3E79;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #7A4B8A;
+  }
+  
+  /* Modal */
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .modal-btn {
+    background-color: #5A3E79;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .modal-btn:hover {
+    background-color: #7A4B8A;
+  }
+  
+  .delete-btn {
+    background-color: #5A3E79;
+  }
+  
+  .delete-btn:hover {
+    background-color: #7A4B8A;
+  }
+  
+  .cancel-btn {
+    background-color: #A9A9A9;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #8C8C8C;
+  }
+  
+  /* Estilo del QR Modal */
+  .qr-image {
+    max-width: 100%;
+    width: 300px;
+    margin-top: 10px;
+  }
+  
+  /* Fondo de Overlay */
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+
+/* Ajustes para que los modales aparezcan como ventanas emergentes flotantes */
+.qr-modal, .edit-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  position: fixed; /* Esto hace que el modal sea independiente */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el modal en la pantalla */
+  z-index: 9999; /* Asegura que el modal esté por encima de todo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Añade sombra al modal */
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para el modal */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998; /* Asegura que la capa de fondo esté debajo del modal */
+}
+
+/* Estilos de los botones */
+.modal-btn {
+  background-color: #5A3E79;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  background-color: #7A4B8A;
+}
+
+.delete-btn {
+  background-color: #5A3E79;
+}
+
+.delete-btn:hover {
+  background-color: 7A4B8A;
+}
+
+.cancel-btn {
+  background-color: grey;
+}
+
+.cancel-btn:hover {
+  background-color: darkgrey;
+}
+
+/* Estilo del QR Modal */
+.qr-image {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+  
+.window-title {
+    font-weight: bold;
+    font-size: 22px;
+    color: #748194; /* Color actualizado */
+}
+
+.edit-modal input {
+  font-weight: bold;
+  width: 92%;
+  height: 32px;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+  background: #F6F7F9;
+  color: #748194;
+  font-size: 16px;
+}
+
+
+
+.stats-section {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.stats-section .window-title {
+  font-size: 22px;
+  color: #5A3E79;
+  margin-bottom: 20px;
+}
+
+.stats-cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.stats-card {
+  background-color: #FAF3EC;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #5A3E79;
+}
+
+.stats-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #748194;
+  margin-bottom: 10px;
+}
+
+.stats-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5A3E79;
+}
+
+
+.reports-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.reports-section h3 {
+  font-size: 22px;
+  color: #5A3E79;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #FAF3EC;
+}
+
+.reports-table th,
+.reports-table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.reports-table th {
+  background-color: #5A3E79;
+  color: white;
+  font-weight: bold;
+}
+
+.reports-table tr:nth-child(even) {
+  background-color: #F9F9F9;
+}
+
+.reports-table tr:hover {
+  background-color: #E9E9E9;
+}
+
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: #748194;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Estilos para el modal de reporte */
+.report-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  margin: auto;
+  text-align: left;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.report-modal h3 {
+  font-size: 22px;
+  color: #5A3E79;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.report-modal p {
+  font-size: 16px;
+  color: #748194;
+  margin-bottom: 10px;
+}
+
+.report-modal a {
+  color: #5A3E79;
+  text-decoration: none;
+}
+
+.report-modal a:hover {
+  text-decoration: underline;
+}
+
+.red-btn {
+  background-color: #BF3F3F;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.red-btn:hover {
+  background-color: #D9534F;
+}
+
+.edit-modal input,
+.edit-modal select {
+  font-weight: bold;
+  width: 92%;
+  height: 40px;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+  background: #F6F7F9;
+  color: #748194;
+  font-size: 16px;
+}
+
+
+/* Estilos para la tarjeta de agregar producto */
+.add-product-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F7F9;
+  border: 2px dashed #5A3E79;
+  cursor: pointer;
+}
+
+.add-product-link {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.add-product-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-product-icon {
+  font-size: 50px;
+  color: #5A3E79;
+}
+
+.add-product-card p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #5A3E79;
+  font-weight: bold;
+}
+
+
+/* Estilos para el modal de confirmación */
+.confirm-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.confirm-modal p {
+  font-size: 16px;
+  color: #748194;
+  margin-bottom: 20px;
+}

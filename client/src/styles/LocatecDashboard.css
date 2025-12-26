@@ -1,0 +1,172 @@
+/* Fondo y contenedor principal */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #FAF3EC; /* Color de fondo suave */
+    min-height: 100vh; /* Asegura que cubra toda la pantalla */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Títulos */
+.dashboard-title {
+    color: #5A3E79; /* Tono morado suave */
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.dashboard-subtitle {
+    color: #BF93B6; /* Tono lila */
+    font-size: 20px;
+    margin-bottom: 20px; /* Reducido de 30px a 20px */
+    text-align: center;
+}
+
+/* Tabla */
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    width: 90%; /* Ajusta el ancho según sea necesario */
+    max-width: 800px; /* Limita el ancho máximo */
+    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es muy ancha */
+    margin: auto;
+    margin-top: 10px; /* Reducido de 20px a 10px */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd; /* Línea divisoria suave */
+}
+
+.table th {
+    background-color: #5A3E79; /* Fondo morado */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table td {
+    color: #748194;
+    text-align: center;
+}
+
+/* Hover efecto en filas */
+.table tr:hover {
+    background-color: #F6F7F9;
+}
+
+/* Botones (si se requieren para acciones futuras) */
+.action-btn {
+    background-color: #5A3E79;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+    text-align: center;
+}
+
+.action-btn:hover {
+    background-color: #7A4B8A;
+}
+
+.entregar-btn {
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.entregar-btn:hover {
+    background-color: #218838; /* Verde oscuro al pasar el ratón */
+}
+
+.entregar-btn:disabled {
+    background-color: #6c757d; /* Gris cuando está deshabilitado */
+    cursor: not-allowed;
+}
+
+/* Ajustes en la sección de búsqueda */
+.search-filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Reducido de 20px a 10px */
+    width: 100%; /* Cambiado de 50% a 100% */
+    gap: 10px; /* Añadido espacio entre elementos */
+}
+
+.search-input {
+    flex: 1;
+    max-width: 400px; /* Limita el ancho máximo del input */
+    padding: 8px;
+    font-size: 16px;
+}
+
+.filter-select {
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Paginación */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Reducido de 20px a 10px */
+}
+
+.pagination-container button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #9d8eaf;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-container button.active {
+    background-color: #5A3E79;
+    color: white;
+}
+
+.pagination-container button:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.pagination-container button:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .search-filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-input, .filter-select {
+        width: 100%;
+        max-width: none;
+    }
+
+    .table-container {
+        width: 100%;
+    }
+}

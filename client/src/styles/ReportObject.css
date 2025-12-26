@@ -1,0 +1,95 @@
+/* Contenedor principal de la página */
+body {
+    background-color: #faf3ec; /* Fondo suave */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana */
+    margin: 0;
+  }
+  
+  /* Contenedor de la tarjeta (card) */
+  .report-container {
+    background-color: #f9f9f9; /* Fondo suave */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Tamaño máximo de la tarjeta */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título principal */
+  .report-title {
+    color: #5a3e79;  /* Color del título */
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Descripción debajo del título */
+  .report-description {
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos del formulario */
+  .report-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .report-textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f6f7f9;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+    resize: none;
+  }
+  
+  .report-btn {
+    font-weight: bold;
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    background: #5a3e79;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .report-btn:hover {
+    background-color: #4a2e6c; /* Cambio de color al pasar el ratón */
+  }
+  
+  /* Mensajes de estado */
+  .report-status {
+    text-align: center;
+    margin-top: 20px;
+    color: green;  /* Cambia el color según el estado */
+  }
+  
+  .report-back-btn {
+    display: block;
+    width: 100%;
+    height: 45px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .report-back-btn:hover {
+    background-color: #bbb; /* Cambio de color al pasar el ratón */
+  }
+  
