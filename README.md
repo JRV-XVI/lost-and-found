@@ -212,10 +212,4 @@ lost-and-found/
 └── .gitignore
 ```
 
----
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
