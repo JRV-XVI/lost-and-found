@@ -11,6 +11,10 @@
 
 [About](#-about-the-project) • [Features](#-features) • [Tech Stack](#-tech-stack) • [Installation](#-installation)
 
+---
+
+> **Note:** This repository contains a restored copy of the project files from the original repository which is no longer accessible.
+
 </div>
 
 ---
